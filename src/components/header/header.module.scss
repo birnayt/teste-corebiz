@@ -1,0 +1,90 @@
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1240px;
+}
+
+.logo {
+}
+
+.search {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  max-width: 60%;
+
+  .searchForm {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+  .searchField {
+    width: 100%;
+    height: 23px;
+    border: none;
+    border-bottom: 1px solid #7A7A7A;
+    outline: none;
+    padding-bottom: 5px;
+    color: #7A7A7A;
+    font-size: 13px;
+
+  }
+
+  .searchSubmit {
+    font-size: 0;
+    background: url("../../assets/imgs/icon-search.png");
+    border: none;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  min-width: 155px;
+
+  .myAccount {
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #7A7A7A;
+    display: flex;
+
+    .spriteAccount {
+      background-image: url("../../assets/imgs/icon-user.png");
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+      display: block;
+    }
+  }
+
+  .cart {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .cartCount {
+      background-color: #F8475F;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      color: #fff;
+      font-size: 11px;
+      margin-left: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+}
