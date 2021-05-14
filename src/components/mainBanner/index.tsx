@@ -21,16 +21,16 @@ const MainBanner: React.FC = () => {
     <div className={style.mainBanner}>
       <Slider {...settings}>
         <div className={style.slickImage}>
-          <a href="/"><img src={bannerDesktop} className={style.bannerDesktop} alt="Main Banner - Desktop" /></a>
-          <a href="/"><img src={bannerMobile} className={style.bannerMobile} alt="Main Banner - Mobile" /></a>
+          <a href="#banner"><img src={bannerDesktop} className={style.bannerDesktop} alt="Main Banner - Desktop" /></a>
+          <a href="#banner"><img src={bannerMobile} className={style.bannerMobile} alt="Main Banner - Mobile" /></a>
         </div>
         <div className={style.slickImage}>
-          <a href="/"><img src={bannerDesktop} className={style.bannerDesktop} alt="Main Banner - Desktop" /></a>
-          <a href="/"><img src={bannerMobile} className={style.bannerMobile} alt="Main Banner - Mobile" /></a>
+          <a href="#banner"><img src={bannerDesktop} className={style.bannerDesktop} alt="Main Banner - Desktop" /></a>
+          <a href="#banner"><img src={bannerMobile} className={style.bannerMobile} alt="Main Banner - Mobile" /></a>
         </div>
         <div className={style.slickImage}>
-          <a href="/"><img src={bannerDesktop} className={style.bannerDesktop} alt="Main Banner - Desktop" /></a>
-          <a href="/"><img src={bannerMobile} className={style.bannerMobile} alt="Main Banner - Mobile" /></a>
+          <a href="#banner"><img src={bannerDesktop} className={style.bannerDesktop} alt="Main Banner - Desktop" /></a>
+          <a href="#banner"><img src={bannerMobile} className={style.bannerMobile} alt="Main Banner - Mobile" /></a>
         </div>
       </Slider>
     </div>

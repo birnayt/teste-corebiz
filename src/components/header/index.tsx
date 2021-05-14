@@ -5,7 +5,7 @@ import logoHeader from '../../assets/imgs/logo-header.png';
 import logoCart from '../../assets/imgs/icon-cart.png';
 import menuMobile from '../../assets/imgs/icon-menu-mobile.png';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header>
       <div className={style.mobileMenu}>

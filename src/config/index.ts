@@ -1,0 +1,1 @@
+export const API_URL = 'https://corebiz-test.herokuapp.com/api/v1';

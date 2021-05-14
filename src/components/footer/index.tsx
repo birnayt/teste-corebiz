@@ -9,7 +9,7 @@ import iconEmail from '../../assets/imgs/icon-email.png';
 import iconContact from '../../assets/imgs/icon-contact.png';
 
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <Newsletter />

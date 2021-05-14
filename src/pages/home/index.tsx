@@ -3,16 +3,18 @@ import React from 'react';
 
 import Header from '../../components/header';
 import MainBanner from '../../components/mainBanner';
+import Shelf from '../../components/shelf';
 import Footer from '../../components/footer';
 
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <>
       <Header />
-      <body>
+      <div className="body home">
         <MainBanner />
-      </body>
+        <Shelf />
+      </div>
       <Footer />
     </>
   );
