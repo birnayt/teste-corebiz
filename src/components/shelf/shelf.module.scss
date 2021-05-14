@@ -1,0 +1,15 @@
+.shelf {
+  max-width: 1280px;
+  margin: 25px auto 60px;
+  padding: 0 25px;
+
+  .title {
+    &:after {
+      display: block;
+      content: '';
+      width: 65px;
+      border-bottom: 5px solid #C0C0C0;
+      margin-top: 10px;
+    }
+  }
+}

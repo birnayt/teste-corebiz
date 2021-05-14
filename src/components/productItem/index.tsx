@@ -4,6 +4,7 @@ import { toBrl } from '../../utils'
 import { Product } from '../../models'
 
 import style from './productItem.module.scss';
+import flagDiscount from '../../assets/imgs/flag-discount.png';
 
 type Props = {
   product: Product;
@@ -11,17 +12,21 @@ type Props = {
 
 const ProductItem = (props: Props) => {
   console.log(props.product);
+
   return props.product ? (
     <div className={style.item}>
-      <div className={style.flag}>
-        {props.product.listPrice ? <p>OFF</p> : null}
-      </div>
-      <div className={style.img}>
-        <img src={props.product.imageUrl} alt={props.product.productName} />
-      </div>
+      <a href="#product" className={style.link}>
+        <div className={style.flag}>
+          {props.product.listPrice ? <img src={flagDiscount} alt="Discount" /> : null}
+        </div>
+        <div className={style.img}>
+          <img src={props.product.imageUrl} alt={props.product.productName} />
+        </div>
+      </a>
       <div className={style.info}>
-        <p className={style.name}>{props.product.productName}</p>
+        <a href="#link" className={style.name}>{props.product.productName}</a>
         <img className={style.stars} src={`assets/stars/stars-${props.product.stars}.png`} alt="" />
+        <div className={style.listPrice}>{props.product.listPrice ? 'de ' + toBrl(props.product.listPrice / 100) : null}</div>
         <div className={style.price}>por {toBrl(props.product.price / 100)}</div>
         <div className={style.installments}>
           {props.product.installments.length ?

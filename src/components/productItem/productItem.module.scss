@@ -1,0 +1,106 @@
+.item {
+  max-height: 360px;
+  min-height: 360px;
+  max-width: 216px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    margin-top: auto;
+  }
+
+  .name {
+    text-decoration: none;
+    color: #7A7A7A;
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .stars {
+    max-width: 68px;
+    margin: 5px 0;
+  }
+
+  .price {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .listPrice {
+    margin: 2px 0;
+    min-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #7A7A7A;
+    text-decoration: line-through;
+  }
+
+  .installments {
+    p {
+      margin: 5px 0;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #7A7A7A;
+    }
+  }
+
+  .buyBtn {
+    background: #000000;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 9px 28px;
+    border: none;
+    cursor: pointer;
+    margin: 3px 0;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  @media only screen and (min-width: 992px) {
+    &:hover {
+      .info {
+        background: #E6E8EA;
+      }
+      .buyBtn {
+        opacity: 1;
+      }
+    }  
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .item {
+    .buyBtn {
+      opacity: 1;
+      font-size: 13px;
+      padding: 12px 34px;
+    }
+  }
+}

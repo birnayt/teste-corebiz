@@ -1,0 +1,31 @@
+.slick-arrow {
+  position: absolute;
+  top: calc(50% - 22px);
+  z-index: 10;
+}
+.slick-next {
+  right: 0;
+}
+
+.slick-arrow {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0;
+  background: url(../../assets/imgs/arrow-slick.png);
+  height: 22px;
+  width: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slick-next {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+.slick-dots { 
+  position: unset;
+}
