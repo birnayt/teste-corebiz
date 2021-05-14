@@ -3,10 +3,14 @@ import style from './header.module.scss';
 
 import logoHeader from '../../assets/imgs/logo-header.png';
 import logoCart from '../../assets/imgs/icon-cart.png';
+import menuMobile from '../../assets/imgs/icon-menu-mobile.png';
 
 const Header = () => {
   return (
     <header>
+      <div className={style.mobileMenu}>
+        <img src={menuMobile} alt="Mobile Menu" />
+      </div>
       <div className={style.logo}>
         <a href="/" title="CoreBiz"><img src={logoHeader} alt="CoreBiz Logo" /></a>
       </div>
