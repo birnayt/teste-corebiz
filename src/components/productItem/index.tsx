@@ -1,6 +1,8 @@
 /* eslint-disable camelcase */
 import React from 'react';
+
 import { toBrl } from '../../utils'
+import { useCart } from '../../contexts';
 import { Product } from '../../models'
 
 import style from './productItem.module.scss';
@@ -11,7 +13,7 @@ type Props = {
 }
 
 const ProductItem = (props: Props) => {
-  console.log(props.product);
+  const { cartCount, setCartCount } = useCart();
 
   return props.product ? (
     <div className={style.item}>
@@ -34,11 +36,11 @@ const ProductItem = (props: Props) => {
             : null
           }
         </div>
-        <button className={style.buyBtn}>
+        <button className={style.buyBtn} onClick={() => { setCartCount(cartCount !== undefined ? cartCount + 1 : 0) }}>
           Comprar
         </button>
       </div>
-    </div>
+    </div >
   ) : null;
 }
 

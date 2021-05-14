@@ -2,3 +2,4 @@
 // Nesse caso no App.tsx
 
 export * from './products';
+export * from './cart';

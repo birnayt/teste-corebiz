@@ -64,7 +64,9 @@
         margin-bottom: 15px;
         color: #000;
         font-weight: bold;
-        padding: 16px 12px;
+        padding: 16px 15px;
+        width: 100%;
+        max-width: unset;
 
         &:first-child {
           margin-right: 0;

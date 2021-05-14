@@ -3,6 +3,9 @@
   top: calc(50% - 22px);
   z-index: 10;
 }
+.slick-arrow.slick-disabled {
+  opacity: 0.5;
+} 
 .slick-next {
   right: 0;
 }
@@ -26,6 +29,8 @@
   transform-origin: center;
 }
 
-.slick-dots { 
-  position: unset;
+@media only screen and (max-width: 992px) {
+  .shelf-slick .slick-dots {
+    position: unset;
+  }
 }

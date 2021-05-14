@@ -7,6 +7,7 @@ import { useProducts } from '../../contexts';
 import { settingsShelf } from '../../config';
 
 import ProductItem from '../productItem';
+
 import style from './shelf.module.scss';
 import './slick.css';
 
@@ -23,10 +24,11 @@ const Shelf: React.FC = () => {
           console.log("Ocorreu um erro ao carregar os produtos");
         })
     }
-  }, [products]);
+    console.log(products)
+  }, []);
 
   return (
-    <div className={style.shelf}>
+    <div className={style.shelf + " shelf-slick"}>
       <h2 className={style.title}>Mais Vendidos</h2>
       {products && products?.length ?
         <Slider {...settingsShelf}>

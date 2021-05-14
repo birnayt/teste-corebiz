@@ -2,4 +2,5 @@
 // Nesse caso no App.tsx
 
 export * from './product';
+export * from './newsletter';
 

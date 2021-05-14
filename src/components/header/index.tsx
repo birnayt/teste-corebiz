@@ -1,11 +1,15 @@
 import React from 'react';
 import style from './header.module.scss';
 
+import { useCart } from '../../contexts';
+
 import logoHeader from '../../assets/imgs/logo-header.png';
 import logoCart from '../../assets/imgs/icon-cart.png';
 import menuMobile from '../../assets/imgs/icon-menu-mobile.png';
 
 const Header: React.FC = () => {
+  const { cartCount } = useCart();
+
   return (
     <header>
       <div className={style.mobileMenu}>
@@ -31,7 +35,7 @@ const Header: React.FC = () => {
         <div>
           <div className={style.cart}>
             <img src={logoCart} alt="MiniCart" />
-            <p className={style.cartCount}>1</p>
+            <p className={style.cartCount}>{cartCount}</p>
           </div>
         </div>
       </div>
