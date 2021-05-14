@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <header>
       <div className={style.mobileMenu}>
-        <img src={menuMobile} alt="Mobile Menu" />
+        <button className={style.mobileMenuBtn}>
+          <img src={menuMobile} alt="Mobile Menu" />
+        </button>
       </div>
       <div className={style.logo}>
         <a href="/" title="CoreBiz"><img src={logoHeader} alt="CoreBiz Logo" /></a>

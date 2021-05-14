@@ -45,6 +45,7 @@ header {
   .searchSubmit {
     font-size: 0;
     background: url("../../assets/imgs/icon-search.png");
+    background-repeat: no-repeat;
     border: none;
     width: 18px;
     height: 18px;
@@ -117,6 +118,11 @@ header {
   .mobileMenu {
     display: block;
 
+    .mobileMenuBtn {
+      background: none;
+      border: none;
+    }
+
     img {
       width: 32px;
     }
@@ -147,6 +153,7 @@ header {
 @media only screen and (max-width: 575px) {
   header {
     padding: 0 20px;
+    margin-bottom: 2px;
   }
 
   .logo {

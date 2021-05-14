@@ -1,0 +1,22 @@
+.bannerDesktop {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+}
+.bannerMobile {
+  width: 100%;
+  max-width: 640px;
+}
+
+@media only screen and (max-width: 642px) {
+  .bannerDesktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 642px) {
+  .bannerMobile {
+    display: none;
+  }
+}
+
