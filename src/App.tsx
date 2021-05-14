@@ -16,7 +16,6 @@ function App() {
   const localCartCount: number = Number(localStorage.getItem('cartCount')) ? Number(localStorage.getItem('cartCount')) : 0;
   const [cartCount, setCartCount] = useState<number>(localCartCount);
   const [products, setProducts] = useState<Product[]>();
-  console.log(cartCount);
 
   return (
     <CartContext.Provider value={{ cartCount, setCartCount }}>

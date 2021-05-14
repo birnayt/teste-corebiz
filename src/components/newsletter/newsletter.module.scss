@@ -120,10 +120,39 @@
 
 @media only screen and (max-width: 575px) {
   .newsletter {
-
     .newsletterTitle {
       font-size: 21px;
     }
+  }
+}
 
+.newsletterSuccess {
+  text-align: center;
+  max-width: 338px;
+
+  .successBtn {
+    background: #000000;
+    border-radius: 5px;
+    width: 100%;
+    color: #fff;
+    margin-left: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    height: 48px;
+  
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  .successTitle {
+    margin: 10px 0 0;
+    font-weight: bold;
+  }
+
+  .successText {
+    margin: 0 0 10px;
   }
 }

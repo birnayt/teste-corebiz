@@ -13,7 +13,7 @@ export const settingsBanner: Settings = {
 
 export const settingsShelf: Settings = {
   arrows: true,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 4,

@@ -24,7 +24,6 @@ const Shelf: React.FC = () => {
           console.log("Ocorreu um erro ao carregar os produtos");
         })
     }
-    console.log(products)
   }, []);
 
   return (
