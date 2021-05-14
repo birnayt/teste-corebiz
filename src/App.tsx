@@ -13,10 +13,10 @@ import HomePage from './pages/home';
 import './index.css';
 
 function App() {
-  const [cartCount, setCartCount] = useState<number>()
-  const [products, setProducts] = useState<Product[]>()
-
-  useEffect(() => setCartCount(0), []);
+  const localCartCount: number = Number(localStorage.getItem('cartCount')) ? Number(localStorage.getItem('cartCount')) : 0;
+  const [cartCount, setCartCount] = useState<number>(localCartCount);
+  const [products, setProducts] = useState<Product[]>();
+  console.log(cartCount);
 
   return (
     <CartContext.Provider value={{ cartCount, setCartCount }}>
