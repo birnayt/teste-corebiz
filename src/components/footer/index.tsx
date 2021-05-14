@@ -26,12 +26,12 @@ const Footer = () => {
 
         <div className={style.contact}>
           <button className={style.emailContact}>
-            <img src={iconEmail} />
+            <img src={iconEmail} alt="Send a email" />
             <p>Entre em contato</p>
           </button>
 
           <button className={style.talkToUs}>
-            <img src={iconContact} />
+            <img src={iconContact} alt="Talk with us" />
             <p>Fale com o nosso consultor online</p>
           </button>
         </div>
@@ -39,11 +39,11 @@ const Footer = () => {
         <div className={style.signature}>
           <div className={style.signatureDiv}>
             Covered by
-            <img src={iconCoreBiz} />
+            <img src={iconCoreBiz} alt="CoreBiz" />
           </div>
           <div className={style.signatureDiv}>
             Powered By
-            <img src={iconVtex} className={style.iconVtex} />
+            <img src={iconVtex} className={style.iconVtex} alt="Vtex" />
           </div>
         </div>
       </footer>
