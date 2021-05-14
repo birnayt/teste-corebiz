@@ -1,0 +1,118 @@
+footer {
+  height: 213px;
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.localization {
+  color: #fff;
+
+  .localizationTitle {
+    font-size: 20px;
+    line-height: 27px;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 44px;
+      border-bottom: 5px solid #fff;
+      margin-top: 15px;
+    }
+  }
+
+  .companyInfos {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .emailContact {
+    margin-bottom: 20px;
+  }
+
+  .emailContact,
+  .talkToUs {
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    height: 38px;
+    padding: 23px 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    p {
+      max-width: 160px;
+      width: 100%;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+.signature {
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+
+  .signatureDiv {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 18px;
+
+    img {
+      cursor: pointer;
+      margin-top: 2px;
+    }
+
+    .iconVtex {
+      width: 53px;
+    }
+  }
+
+  .signatureDiv:first-child {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  footer {
+    flex-direction: column;
+    height: unset;
+    padding-bottom: 20px;
+  }
+
+  .localization {
+    margin-bottom: 20px;
+  }
+
+  .contact {
+    margin-bottom: 25px;
+  }
+}
