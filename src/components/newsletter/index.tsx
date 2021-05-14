@@ -9,32 +9,67 @@ const Newsletter = () => {
     name: '',
     email: ''
   });
+  const [errorNewsletter, setErrorNewsletter] = useState({ name: false, email: false });
+
+  const validate = ({ name, email }: INewsletter) => {
+    const reEmail = /^.+@.+\..{2,}$/;
+    const reName = /^\S+$/;
+
+    const testObj = {
+      name: !reName.test(name),
+      email: !reEmail.test(email)
+    }
+
+    setErrorNewsletter({ name: testObj.name, email: testObj.email });
+
+    if (Object.values(testObj).some(el => el)) return false; // Verify if some value of errorNewsletter is false
+
+    return true;
+  }
 
   const newsletterSubmit = (e: any) => {
     e.preventDefault();
-    postNewsletter({
+
+    const formFieldValues = {
       name: fieldsNewsletter.name,
       email: fieldsNewsletter.email
-    });
-  }
+    };
+
+    if (validate(formFieldValues)) {
+      postNewsletter({
+        name: fieldsNewsletter.name,
+        email: fieldsNewsletter.email
+      });
+    }
+  };
 
   return (
     <div className={style.newsletter}>
       <h2 className={style.newsletterTitle}>Paticipe de nossas news com promoções e novidades!</h2>
       <form className={style.newsletterForm} onSubmit={newsletterSubmit}>
-        <input type="text" id="news-name"
-          name="name"
-          placeholder="Digite seu nome"
-          className={style.newsletterInput}
-          value={fieldsNewsletter.name}
-          onChange={(e: any) => setFieldsNewsletter({ name: e.target.value, email: fieldsNewsletter.email })} />
-        <input type="text" id="news-email"
-          name="email"
-          placeholder="Digite seu email"
-          className={style.newsletterInput}
-          value={fieldsNewsletter.email}
-          onChange={(e: any) => setFieldsNewsletter({ name: fieldsNewsletter.name, email: e.target.value })}
-        />
+        <div className={style.newsletterDiv}>
+          <input type="text" id="news-name"
+            name="name"
+            placeholder="Digite seu nome"
+            className={style.newsletterInput}
+            value={fieldsNewsletter.name}
+            onChange={(e: any) => setFieldsNewsletter({ name: e.target.value, email: fieldsNewsletter.email })} />
+          <p className={style.error}>
+            {errorNewsletter.name && 'Preencha com seu nome completo'}
+          </p>
+        </div>
+        <div className={style.newsletterDiv}>
+          <input type="text" id="news-email"
+            name="email"
+            placeholder="Digite seu email"
+            className={style.newsletterInput}
+            value={fieldsNewsletter.email}
+            onChange={(e: any) => setFieldsNewsletter({ name: fieldsNewsletter.name, email: e.target.value })}
+          />
+          <p className={style.error}>
+            {errorNewsletter.email && 'Preencha com um e-mail válido'}
+          </p>
+        </div>
         <button className={style.newsletterSubmit}>Eu quero!</button>
       </form>
     </div>
